@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page - Sneakify</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background: #222;
+            padding: 1.5rem 2rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            color: #f4a261;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #f4a261;
+        }
+
+        .order {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .order h2 {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: #222;
+        }
+
+        .order form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .order input, .order select, .order button {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .order .price {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Sneakify</div>
+        <nav>
+            <ul>
+                <li><a href="1index.html">Home</a></li>
+                <li><a href="2products.html">Products</a></li>
+                <li><a href="3about.html">About</a></li>
+                <li><a href="4Order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="order">
+        <h2>Place Your Order</h2>
+        <form action="#" method="post">
+            <label for="name">Таны нэр:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="sneaker">Choose Your Sneaker:</label>
+            <select id="sneaker" name="sneaker" required>
+                <option value="airmax" data-price="250000">Air Max - ₮250,000</option>
+                <option value="yeezy" data-price="350000">Yeezy Boost - ₮350,000</option>
+                <option value="converse" data-price="150000">Converse Chuck - ₮150,000</option>
+                <option value="vans" data-price="200000">Vans Classic - ₮200,000</option>
+                <option value="asics" data-price="240000">Asics Gel Nimbus - ₮240,000</option>
+                <option value="fila" data-price="180000">Fila Disruptor - ₮180,000</option>
+                <option value="underarmour" data-price="320000">Under Armour HOVR - ₮320,000</option>
+                <option value="nike" data-price="280000">Nike Zoom - ₮280,000</option>
+                <option value="adidas" data-price="300000">Adidas Ultraboost - ₮300,000</option>
+                <option value="puma" data-price="220000">Puma RS-X - ₮220,000</option>
+                <option value="reebok" data-price="270000">Reebok Nano - ₮270,000</option>
+                <option value="newbalance" data-price="230000">New Balance 574 - ₮230,000</option>
+                <option value="curry" data-price="570000">Under Armour Curry 12 - ₮570,000</option>
+                <option value="lamelo" data-price="570000">Lamelo Ball - ₮570,000</option>
+            </select>
+        
+            <label for="size">Choose Your Size:</label>
+            <select id="size" name="size" required>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+            </select>
+        
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+        
+            <p class="price" id="totalPrice">Total Price: ₮0</p>
+        
+            <button type="submit">Submit Order</button>
+        </form>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sneakify. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.querySelector('form');
+        
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            
+            const name = document.getElementById('name').value;
+            const sneaker = document.getElementById('sneaker').value;
+            const quantity = document.getElementById('quantity').value;
+            
+            const confirmationMessage = `Захиалга баталгаажлаа!\n\nНэр: ${name}\nГутал: ${sneaker}\nТоо ширхэг: ${quantity}`;
+            
+            alert(confirmationMessage);
+    
+            window.close();
+        });
+    </script>
+    
+    
+
+</body>
+</html>

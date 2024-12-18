@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Sneakify</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background: #222;
+            padding: 1.5rem 2rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            color: #f4a261;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #f4a261;
+        }
+
+        .products {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .products h2 {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: #222;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            justify-items: center;
+        }
+
+        .product-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            color: #222;
+        }
+
+        .product-card p {
+            font-size: 1.2rem;
+            color: #f4a261;
+        }
+
+        .btn-order {
+            background-color: #f4a261;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 1rem;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .btn-order:hover {
+            background-color: #e07b3d;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Sneakify</div>
+        <nav>
+            <ul>
+                <li><a href="1index.html">Home</a></li>
+                <li><a href="2products.html">Products</a></li>
+                <li><a href="3About.html">About</a></li>
+                <li><a href="4Order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products">
+        <h2>Explore Our Sneakers</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="airmax.jpg" alt="Air Max">
+                <h3>Air Max</h3>
+                <p>₮250,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="yeezy.jpg" alt="Yeezy Boost">
+                <h3>Yeezy Boost</h3>
+                <p>₮350,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="converse.jpg" alt="Converse Chuck">
+                <h3>Converse Chuck</h3>
+                <p>₮150,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="Vans.shoes.jpg" alt="Vans Classic">
+                <h3>Vans Classic</h3>
+                <p>₮200,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="asics.jpg" alt="Asics Gel Nimbus">
+                <h3>Asics Gel Nimbus</h3>
+                <p>₮240,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="FILA.jpg" alt="Fila Disruptor">
+                <h3>Fila Disruptor</h3>
+                <p>₮180,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="underarmour.jpg" alt="Under Armour HOVR">
+                <h3>Under Armour HOVR</h3>
+                <p>₮320,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="nikezoom.jpg" alt="Nike Zoom">
+                <h3>Nike Zoom</h3>
+                <p>₮280,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="adidas.jpg" alt="Adidas Ultraboost">
+                <h3>Adidas Ultraboost</h3>
+                <p>₮300,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="puma.jpg" alt="Puma RS-X">
+                <h3>Puma RS-X</h3>
+                <p>₮220,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="reeebok.jpg" alt="Reebok Nano">
+                <h3>Reebok Nano</h3>
+                <p>₮270,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="newbalance.jpg" alt="New Balance 574">
+                <h3>New Balance 574</h3>
+                <p>₮230,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="curry.jpg" alt="Elegant Under Armour Curry 12">
+                <h3>curry</h3>
+                <p>₮590,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="lameloBall.jpg" alt="Lamelo ball">
+                <h3>lamelo ball</h3>
+                <p>₮560,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+            <div class="product-card">
+                <img src="gt cut 2.jpg" alt="gt cut 2">
+                <h3>gt cut 2</h3>
+                <p>₮570,000</p>
+                <a href="4Order.html" class="btn-order">Order Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Sneakify. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
